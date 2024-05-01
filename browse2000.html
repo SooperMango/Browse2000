@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse 2000</title>
+    <style>
+        body {
+            background-color: #fff;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            font-family: Serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 60px;
+            letter-spacing: 0;
+            color: forestgreen;
+        }
+        form {
+            margin-top: 20px;
+            display: inline-block;
+        }
+        input[type="text"] {
+            width: 400px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #000;
+            background-color: #fff;
+            color: #000;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="text"]::placeholder {
+            color: #999;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 2px;
+            background-color: #ccc;
+            color: #000;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 40px;
+            box-sizing: border-box;
+        }
+        button:hover {
+            background-color: #bbb;
+        }
+        .open-proxy-button {
+            display: block;
+            margin-top: 20px;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .license-text {
+            position: absolute;
+            bottom: -250px;
+            left: 22%;
+            transform: translateX(0%);
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BROWSE 2000</h1>
+        <form onsubmit="search(); return false;">
+            <input type="text" id="searchTerm" placeholder="Enter your search term..." required>
+            <button type="submit">Search</button>
+        </form>
+        <button class="open-proxy-button" onclick="openProxy()">Open Proxy</button>
+        <div class="license-text">
+            © 2024 Mango Digital | <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GNU General Public License</a>
+        </div>
+    </div>
+
+    <script>
+        function search() {
+            var searchTerm = document.getElementById('searchTerm').value;
+            window.open("https://www.google.com/search?q=" + searchTerm, "_blank");
+        }
+
+        function openProxy() {
+            window.open("https://mango95.yaha.pro/", "_blank");
+        }
+    </script>
+</body>
+</html>
+
