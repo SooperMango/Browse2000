@@ -1,2 +1,2 @@
 # Browse2000
-It is HTML file that uses a google searh bar to serach google
+It is HTML based website that uses a google search bar to search google
